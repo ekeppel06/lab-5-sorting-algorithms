@@ -8,6 +8,6 @@
 
 #include "../myheaders.h"
 
-// Your ASort function(s) goes here ..
+// Your DSort function(s) goes here ..
 
 

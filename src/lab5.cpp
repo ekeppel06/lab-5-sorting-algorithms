@@ -34,6 +34,8 @@ int main() {
 	double  begin_time, end_time, cpu_time_used;
 	string  ifilename, ofilename;
 
+	long testarray5[5] = {1, 6, 4, 3, 9}; //Test array of 5 values and size 5
+	long testarray10[10] = {6, 76, 42, 10, 555, 30, 12, 0, -1, 4}; //Test array of 10 values of size 10
 	while (1) {
 
 		printmenu();
@@ -67,15 +69,17 @@ int main() {
 					// Call your Sort function A here to sort the array 'wData''
 			        //  Note that 'wData' is of size 'sz' (see case 1).
 
+					InsertSort(testarray10, 10);
 
 
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "(A)Sort ran for " << cpu_time_used << " secs.";
-
-					ofilename = "lab5_A_out.txt";
-					writefile(wData, sz, ofilename);
+					for(int i=0; i<10; ++i)
+						cout << endl << testarray10[i];
+					//ofilename = "lab5_A_out.txt";
+					//writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
 						 cerr << endl << "ERROR: Output File could not be opened." <<endl;
