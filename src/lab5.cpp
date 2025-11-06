@@ -19,10 +19,10 @@ using namespace std;
 
 /*
  * A Sort: Insertion Sort - Jeremy
- * B Sort: Bubble - Elliot
- * C Sort: Selection - Frank
+ * B Sort: Bubble Sort - Elliot
+ * C Sort: Selection Sort - Frank
  * D Sort: Mergesort - Jeremy
- * E Sort: ___
+ * E Sort: Shell Sort - Elliot
  * F Sort: ___
  */
 
@@ -97,6 +97,7 @@ int main() {
 
 					begin_time = clock();   // start cpu timer
 
+					bubbleSort(testarray10, 10);
 
 					begin_time = clock();   // start cpu timer
 
@@ -110,9 +111,12 @@ int main() {
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "(B)Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_B_out.txt";
-					writefile(wData, sz, ofilename);
+//					ofilename = "lab5_B_out.txt";
+//					writefile(wData, sz, ofilename);
 
+					for(int i=0; i<10; i++){
+						cout << endl << testarray10[i];
+					}
 					if (sz < 0)	 {
 						 cerr << endl << "ERROR: Output File could not be opened." <<endl;
 						 cerr << "       Quitting Now!" << endl << endl;
