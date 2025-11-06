@@ -19,8 +19,8 @@ using namespace std;
 
 /*
  * A Sort: Insertion Sort - Jeremy
- * B Sort: ___
- * C Sort: ___
+ * B Sort: Bubble - Elliot
+ * C Sort: Selection - Frank
  * D Sort: Mergesort - Jeremy
  * E Sort: ___
  * F Sort: ___
