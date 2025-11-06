@@ -19,10 +19,10 @@ using namespace std;
 
 /*
  * A Sort: Insertion Sort - Jeremy
- * B Sort: ___
+ * B Sort: Bubble Sort - Elliot
  * C Sort: ___
  * D Sort: Mergesort - Jeremy
- * E Sort: ___
+ * E Sort: Shell Sort - Elliot
  * F Sort: ___
  */
 
@@ -97,6 +97,7 @@ int main() {
 
 					begin_time = clock();   // start cpu timer
 
+					bubbleSort(testArray10, 10);
 
 					begin_time = clock();   // start cpu timer
 

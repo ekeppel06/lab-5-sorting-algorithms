@@ -25,6 +25,7 @@ int		readfile(string infilename, long data[]);
 int		writefile(long data[], long size, string outfilename);
 void	swap(long& x, long& y);
 void 	InsertSort(long a[], int size);
+void	bubbleSort(long a[], int size);
 
 
 
