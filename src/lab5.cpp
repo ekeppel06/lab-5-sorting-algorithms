@@ -138,13 +138,13 @@ int main() {
 					// Call your Sort function A here to sort the array 'wData''
 			        //  Note that 'wData' is of size 'sz' (see case 1).
 
-					InsertSort(testarray10, 10);
+					SelectionSort(testarray10, 10);
 
 
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(A)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "(C)Sort ran for " << cpu_time_used << " secs.";
 					for(int i=0; i<10; ++i)
 						cout << endl << testarray10[i];
 //					ofilename = "lab5_A_out.txt";
