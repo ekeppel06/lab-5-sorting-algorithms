@@ -14,8 +14,8 @@
 #include <string>
 #include <iostream>
 #include <unistd.h>
-//#define MAXSIZE	 2100000
-#define MAXSIZE 10
+#define MAXSIZE	 2100000
+
 
 
 using namespace std;

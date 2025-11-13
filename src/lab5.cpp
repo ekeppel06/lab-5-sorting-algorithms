@@ -78,8 +78,8 @@ int main() {
 					cout << endl << "(A)Sort ran for " << cpu_time_used << " secs.";
 					for(int i=0; i<10; ++i)
 						cout << endl << testarray10[i];
-//					ofilename = "lab5_A_out.txt";
-//					writefile(wData, sz, ofilename);
+					ofilename = "lab5_A_out.txt";
+					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
 						 cerr << endl << "ERROR: Output File could not be opened." <<endl;
@@ -163,23 +163,23 @@ int main() {
 
 	                // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
 
+					for(int i =0; i<sz; i++)
+						data[i] = wData[i];
 
 					begin_time = clock();   // start cpu timer
 
 					// Call your Sort function A here to sort the array 'wData''
 			        //  Note that 'wData' is of size 'sz' (see case 1).
 
-					mergeSort(testarray10, 10);
+					mergeSort(wData, sz);
 
 
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "(A)Sort ran for " << cpu_time_used << " secs.";
-					for(int i=0; i<10; ++i)
-						cout << endl << testarray10[i];
-//					ofilename = "lab5_A_out.txt";
-//					writefile(wData, sz, ofilename);
+					ofilename = "lab5_A_out.txt";
+					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
 						 cerr << endl << "ERROR: Output File could not be opened." <<endl;
