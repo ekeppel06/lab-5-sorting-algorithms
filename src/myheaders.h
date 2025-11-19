@@ -14,7 +14,7 @@
 #include <string>
 #include <iostream>
 #include <unistd.h>
-#define MAXSIZE	 2100000
+#define MAXSIZE	2100000
 
 
 
@@ -28,6 +28,7 @@ void	swap(long& x, long& y);
 void 	InsertSort(long a[], int size);
 void	bubbleSort(long a[], int size);
 void 	SelectionSort(long a[], int size);
+void 	quickSort(long a[],int first, int last);
 void	mergeSort(long data[], int size, int start_point = 0);
 
 

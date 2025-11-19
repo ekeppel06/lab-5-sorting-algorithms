@@ -23,7 +23,7 @@ using namespace std;
  * C Sort: Selection Sort - Frank
  * D Sort: Mergesort - Jeremy
  * E Sort: Shell Sort - Elliot
- * F Sort: ___
+ * F Sort: Quick Sort - Frank
  */
 
 
@@ -190,12 +190,41 @@ int main() {
 
 					break;
 
+			case 7: // Sort function F
+
+				begin_time = clock();   // start cpu timer
+
+									// Call your Sort function A here to sort the array 'wData''
+							        //  Note that 'wData' is of size 'sz' (see case 1).
+
+					quickSort(testarray10, 0, 9);
+
+
+						end_time = clock();		// end cpu timer
+
+							cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
+							cout << endl << "(F)Sort ran for " << cpu_time_used << " secs.";
+							for(int i=0; i<10; ++i)
+										cout << endl << testarray10[i];
+				//					ofilename = "lab5_A_out.txt";
+				//					writefile(wData, sz, ofilename);
+
+							if (sz < 0)	 {
+								 cerr << endl << "ERROR: Output File could not be opened." <<endl;
+								 cerr << "       Quitting Now!" << endl << endl;
+								 return 0;
+							}
+							else cout << endl << "Output written to " << ofilename << endl;
+
+					break;
+
 
 			case 0: // Exit Program
 
 					cout << endl << "Received program exit command - I QUIT!" << endl << endl;
 
 					return 0;
+					break;
 
 			default: // Error in selection
 
