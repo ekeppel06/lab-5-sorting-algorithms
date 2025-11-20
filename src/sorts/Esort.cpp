@@ -16,7 +16,7 @@ void shellSort(long data[], int size){
 		h=3*h+1;
 	}
 
-	for(i--; i>=0; i--){
+	for(i--; i>=0; i--){ //i=number of increments
 		h=increments[i];
 		for(int hCnt=h; hCnt<2*h; hCnt++){
 			for(int j=hCnt; j<size;){

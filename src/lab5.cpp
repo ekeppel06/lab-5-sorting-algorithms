@@ -23,7 +23,7 @@ using namespace std;
  * C Sort: Selection Sort - Frank
  * D Sort: Mergesort - Jeremy
  * E Sort: Shell Sort - Elliot
- * F Sort: ___
+ * F Sort: Quick Sort - Frank
  */
 
 
@@ -192,7 +192,7 @@ int main() {
 
 					begin_time = clock();   // start cpu timer
 
-					// Call your Sort function A here to sort the array 'wData''
+					// Call your Sort function E here to sort the array 'wData''
 			        //  Note that 'wData' is of size 'sz' (see case 1).
 
 					shellSort(wData, sz);
