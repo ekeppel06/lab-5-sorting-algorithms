@@ -30,6 +30,7 @@ void	bubbleSort(long a[], int size);
 void 	SelectionSort(long a[], int size);
 void 	quickSort(long a[],int first, int last);
 void	mergeSort(long data[], int size, int start_point = 0);
+void	shellSort(long data[], int size);
 
 
 
