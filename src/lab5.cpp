@@ -224,7 +224,7 @@ int main() {
 				//  Note that 'wData' is of size 'sz' (see case 1).
 
 				for(int i =0; i<sz; i++)
-					data[i] = wData[i];
+					wData[i] = data[i];
 
 				begin_time = clock();   // start cpu timer
 
