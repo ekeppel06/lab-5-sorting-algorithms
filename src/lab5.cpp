@@ -62,14 +62,15 @@ int main() {
 			case 2: // Sort function A
 
                     // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
-
+					for(int i =0; i<sz; i++)
+						wData[i] = data[i];
 
 					begin_time = clock();   // start cpu timer
 
 					// Call your Sort function A here to sort the array 'wData''
 			        //  Note that 'wData' is of size 'sz' (see case 1).
 
-					InsertSort(testarray10, 10);
+					InsertSort(wData, sz);
 
 
 					end_time = clock();		// end cpu timer
@@ -78,7 +79,7 @@ int main() {
 					cout << endl << "(A)Sort ran for " << cpu_time_used << " secs.";
 					for(int i=0; i<10; ++i)
 						cout << endl << testarray10[i];
-					ofilename = "lab5_A_out.txt";
+					ofilename = "lab5_InsertSort_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
@@ -164,7 +165,7 @@ int main() {
 	                // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
 
 					for(int i =0; i<sz; i++)
-						data[i] = wData[i];
+						wData[i] = data[i];
 
 					begin_time = clock();   // start cpu timer
 
@@ -178,7 +179,7 @@ int main() {
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "(A)Sort ran for " << cpu_time_used << " secs.";
-					ofilename = "lab5_A_out.txt";
+					ofilename = "lab5_mergeSort_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
