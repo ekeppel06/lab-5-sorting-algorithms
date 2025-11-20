@@ -9,16 +9,16 @@
 
 // Your ESort function(s) goes here ..
 
-void shellSort(long data[], int size){
+void shellSort(long data[], int size){//Divides array into subarrays increasing in length by a factor of 3
 	int increments[20], k, i, h;
 	for(h=1, i=0; h<size; i++){
 		increments[i]=h;
 		h=3*h+1;
 	}
 
-	for(i--; i>=0; i--){ //i=number of increments
+	for(i--; i>=0; i--){ //i=number of increments/subarrays
 		h=increments[i];
-		for(int hCnt=h; hCnt<2*h; hCnt++){
+		for(int hCnt=h; hCnt<2*h; hCnt++){//Loops through selected subarray
 			for(int j=hCnt; j<size;){
 				long temp = data[j];
 				k=j;
