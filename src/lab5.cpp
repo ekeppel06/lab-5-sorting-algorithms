@@ -76,7 +76,7 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(A)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "InsertSort Sort ran for " << cpu_time_used << " secs.";
 					for(int i=0; i<10; ++i)
 						cout << endl << testarray10[i];
 					ofilename = "lab5_InsertSort_out.txt";
@@ -107,9 +107,9 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(B)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "BubbleSort Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_B_out.txt";
+					ofilename = "lab5_BubbleSort_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
@@ -121,29 +121,28 @@ int main() {
 
 					break;
 
-			// Write the other cases 4 - 7 here
 
 			case 4: // Sort function C
 
                     // First, copy the contents of the array 'data' to the working array 'wData'. Your program should sort 'wData' and not 'data'.
 
+					for(int i =0; i<sz; i++)
+						wData[i] = data[i];
 
 					begin_time = clock();   // start cpu timer
 
 					// Call your Sort function A here to sort the array 'wData''
 			        //  Note that 'wData' is of size 'sz' (see case 1).
 
-					SelectionSort(testarray10, 10);
+					SelectionSort(wData, 10);
 
 
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(C)Sort ran for " << cpu_time_used << " secs.";
-					for(int i=0; i<10; ++i)
-						cout << endl << testarray10[i];
-//					ofilename = "lab5_C_out.txt";
-//					writefile(wData, sz, ofilename);
+					cout << endl << "SelectionSort Sort ran for " << cpu_time_used << " secs.";
+					ofilename = "lab5_SelectionSort_out.txt";
+					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
 						 cerr << endl << "ERROR: Output File could not be opened." <<endl;
@@ -172,10 +171,8 @@ int main() {
 					end_time = clock();		// end cpu timer
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-					cout << endl << "(A)Sort ran for " << cpu_time_used << " secs.";
-					ofilename = "lab5_mergeSort_out.txt";
-					cout << endl << "(D)Sort ran for " << cpu_time_used << " secs.";
-					ofilename = "lab5_D_out.txt";
+					cout << endl << "MergeSort Sort ran for " << cpu_time_used << " secs.";
+					ofilename = "lab5_MergeSort_out.txt";
 					writefile(wData, sz, ofilename);
 
 					if (sz < 0)	 {
@@ -206,9 +203,9 @@ int main() {
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 
-					cout << endl << "(E)Sort ran for " << cpu_time_used << " secs.";
+					cout << endl << "ShellSort Sort ran for " << cpu_time_used << " secs.";
 
-					ofilename = "lab5_E_out.txt";
+					ofilename = "lab5_ShellSort_out.txt";
 
 					writefile(wData, sz, ofilename);
 
@@ -222,7 +219,6 @@ int main() {
 					break;
 			case 7: // Sort function F
 
-				begin_time = clock();   // start cpu timer
 
 				// Call your Sort function F here to sort the array 'wData''
 				//  Note that 'wData' is of size 'sz' (see case 1).
@@ -241,8 +237,8 @@ int main() {
 				end_time = clock();	// end cpu timer
 
 				cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
-				cout << endl << "(F)Sort ran for " << cpu_time_used << " secs.";
-				ofilename = "lab5_A_out.txt";
+				cout << endl << "QuickSort Sort ran for " << cpu_time_used << " secs.";
+				ofilename = "lab5_QuickSort_out.txt";
 				writefile(wData, sz, ofilename);
 
 				if (sz < 0)	 {
