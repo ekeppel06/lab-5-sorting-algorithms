@@ -49,7 +49,7 @@ int main() {
 
 					ifilename = "lab5_input.txt";
 					sz = readfile(ifilename, data);
-					sz = sz/2;
+					//sz = sz/2;
 
 					if (sz < 0)	 {
 						 cerr << endl << "ERROR: Input File Not Found or File cannot be opened." <<endl;
@@ -78,8 +78,6 @@ int main() {
 
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "InsertSort Sort ran for " << cpu_time_used << " secs.";
-					for(int i=0; i<10; ++i)
-						cout << endl << testarray10[i];
 					ofilename = "lab5_InsertSort_out.txt";
 					writefile(wData, sz, ofilename);
 
